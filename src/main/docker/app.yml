@@ -1,0 +1,15 @@
+version: '2'
+services:
+    oasis_sim_app-app:
+        image: oasis_sim_app
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_DATA_MONGODB_URI=mongodb://oasis_sim_app-mongodb:27017
+            - SPRING_DATA_MONGODB_DATABASE=oasis_sim_app
+            - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
+        ports:
+            - 8080:8080
+    oasis_sim_app-mongodb:
+        extends:
+            file: mongodb.yml
+            service: oasis_sim_app-mongodb

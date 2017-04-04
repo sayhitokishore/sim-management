@@ -26,8 +26,8 @@ spring:
         serialization.indent_output: true
     data:
         mongodb:
-            uri: mongodb://user:user@ds147920.mlab.com:47920/oasissimapp
-            database: oasissimapp
+            uri: mongodb://user:user@ds149820.mlab.com:49820/oasis_sim_app
+            database: oasis_sim_app
     mail:
         host: localhost
         port: 25
